@@ -244,46 +244,34 @@ nav {
   box-shadow: 0 25px 60px rgba(0,0,0,0.5); overflow: hidden; z-index: 1;
 }
 .terminal-console-inner { position: relative; z-index: 5; text-align: center; max-width: 850px; margin: 0 auto; }
-.console-links-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.5rem; margin: 3.5rem 0 2.5rem; text-align: right; }
-.console-row-link { background: rgba(3,0,30,0.8); border: 1px solid rgba(255,255,255,0.05); padding: 1.5rem; display: flex; align-items: center; gap: 1.2rem; text-decoration: none; border-radius: 6px; }
+.console-links-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.5rem; margin: 3.5rem 0; text-align: right; }
+.console-row-link { background: rgba(3,0,30,0.8); border: 1px solid rgba(255,255,255,0.05); padding: 1.5rem; display: flex; align-items: center; gap: 1.2rem; text-decoration: none; border-radius: 6px; transition: var(--transition-matrix); }
 .console-row-link:hover { border-color: var(--neon-cyan); background: rgba(0,242,254,0.05); transform: translateX(-4px); }
 .console-row-icon { font-size: 1.5rem; color: var(--neon-cyan); }
 .console-row-label { font-size: 0.75rem; color: var(--text-dim); display: block; margin-bottom: 3px; }
 .console-row-value { font-size: 0.95rem; color: #fff; font-weight: 600; word-break: break-all; }
 
-/* زر الواتساب الاحترافي المعدل ليطابق الهوية (تدرج بين السايان والبنفسجي النيون مع توهج رقمي) */
-.hologram-whatsapp-mega-btn {
-  background: linear-gradient(90deg, var(--neon-cyan), var(--neon-purple));
-  color: #000000; /* تحويل الخط للأسود ليكون متباين جداً وواضح فوق الخلفية المضيئة للهوية */
-  padding: 22px 50px;
-  border-radius: 8px;
-  font-weight: 900;
-  font-size: 1.2rem;
-  text-decoration: none;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 15px;
-  transition: var(--transition-matrix);
-  clip-path: polygon(5% 0%, 100% 0%, 95% 100%, 0% 100%);
-  box-shadow: 0 0 30px rgba(0, 242, 254, 0.4);
-  width: 100%;
-  max-width: 550px;
-  margin-top: 1.5rem;
-  border: 1px solid rgba(255, 255, 255, 0.3);
+.console-whatsapp-cyber-btn {
+  border: 1px solid rgba(0, 242, 254, 0.4) !important;
+  background: rgba(3, 0, 30, 0.9) !important;
+  position: relative;
+  overflow: hidden;
 }
-.hologram-whatsapp-mega-btn:hover {
-  transform: scale(1.04);
-  filter: brightness(1.25);
-  box-shadow: 0 0 50px var(--neon-cyan);
+.console-whatsapp-cyber-btn:hover {
+  border-color: var(--neon-purple) !important;
+  background: linear-gradient(135deg, rgba(0, 242, 254, 0.1), rgba(157, 78, 221, 0.15)) !important;
+  box-shadow: 0 0 25px rgba(157, 78, 221, 0.3) !important;
 }
-.whatsapp-icon-pulse {
-  font-size: 1.6rem;
-  animation: pulseScale 1.5s infinite alternate;
+.console-whatsapp-cyber-btn .console-row-icon {
+  color: var(--neon-cyan) !important;
+  animation: cyberPulse 2s infinite alternate;
 }
-@keyframes pulseScale {
-  0% { transform: scale(1); }
-  100% { transform: scale(1.25); }
+.console-whatsapp-cyber-btn:hover .console-row-icon {
+  color: var(--neon-purple) !important;
+}
+@keyframes cyberPulse {
+  0% { text-shadow: 0 0 5px var(--neon-cyan); }
+  100% { text-shadow: 0 0 15px var(--neon-cyan), 0 0 20px var(--neon-purple); }
 }
 
 footer { padding: 3rem 4rem; background: #02000a; border-top: 1px solid rgba(255,255,255,0.03); display: flex; justify-content: space-between; align-items: center; }
@@ -310,7 +298,6 @@ footer span.tech-label { font-family: 'Orbitron', sans-serif; color: var(--neon-
   .edu-matrix-deck { grid-template-columns: 1fr; gap: 1.2rem; }
   .terminal-contact-console { padding: 3rem 1.2rem; }
   .console-links-grid { grid-template-columns: 1fr; gap: 1rem; }
-  .hologram-whatsapp-mega-btn { clip-path: none; border-radius: 4px; font-size: 1.05rem; padding: 18px 20px; }
   footer { flex-direction: column; gap: 1rem; text-align: center; padding: 2.5rem 1rem; }
 }
 </style>
@@ -342,34 +329,34 @@ footer span.tech-label { font-family: 'Orbitron', sans-serif; color: var(--neon-
       <h1 class="mega-neon-moniker">MOHAMMED ASAM MERGH</h1>
     </div>
 
-    <h2 class="hero-quantum-tagline">مصمم جرافيك ومحترف وسائط متعددة · خبير حلول الهويات البصرية العصرية</h2>
+    <h2 class="hero-quantum-tagline">مصمم جرافيك ومحترف وسائط متعددة · خبير ابتكار الهويات البصرية العصرية</h2>
     <p class="hero-quantum-summary">
-      أبتكر حلولاً بصرية عالية التأثير تدمج بين سحر التصميم الإبداعي والوعي الفني وسرعة التنفيذ، مدعوماً بخلفية في تطوير واجهات الويب والدعم التقني لضمان خروج الأفكار بأرقى صورة رقمية أو مطبوعة.
+      أبتكر حلولاً بصرية عالية التأثير تدمج بين فلسفة التصميم الإبداعي والوعي الفني وسرعة التنفيذ، مدعوماً بخلفية صلبة في تطوير واجهات الويب والدعم التقني؛ لضمان خروج الأفكار بأرقى صورة رقمية أو مطبوعة.
     </p>
     
     <div class="hero-btn-group">
       <a href="#contact" class="hologram-cta-btn">
-        <span>تواصل فوري إبداعي</span>
+        <span>تواصل إبداعي فوري</span>
         <span style="font-family:'Orbitron'; font-size:0.85rem;">➔</span>
       </a>
-      <a href="https://www.behance.net/mohammedmerghm" target="_blank" class="hologram-secondary-btn">استعراض بورتفوليو Behance</a>
+      <a href="https://www.behance.net/mohammedmerghm" target="_blank" class="hologram-secondary-btn">استعراض معرض Behance</a>
     </div>
 
     <div class="cyber-metrics-rack">
       <div class="metric-quantum-unit">
-        <h3>+١٥٠</h3>
+        <h3>+150</h3>
         <p>مشروع تصميم وهوية بصرية متكاملة تم تنفيذها بنجاح</p>
       </div>
       <div class="metric-quantum-unit">
-        <h3>+٤٠٪</h3>
+        <h3>+40%</h3>
         <p>زيادة معدل تفاعل حسابات العملاء بفضل الأداء المرئي الجاذب</p>
       </div>
       <div class="metric-quantum-unit">
-        <h3>+١٠٠</h3>
-        <p>متدرب تم تدريبهم وتطوير مهاراتهم في برامج أدوبي الإبداعية</p>
+        <h3>+100</h3>
+        <p>متدرب تم تطوير مهاراتهم في برامج أدوبي الإبداعية</p>
       </div>
       <div class="metric-quantum-unit">
-        <h3>٩٥٪</h3>
+        <h3>95%</h3>
         <p>معدل رضا تراكمي من العملاء على سرعة وجودة التسليم</p>
       </div>
     </div>
@@ -380,14 +367,14 @@ footer span.tech-label { font-family: 'Orbitron', sans-serif; color: var(--neon-
   <div class="matrix-container">
     <div class="matrix-header-node">
       <span class="node-index">01 // IDENTITY NODE</span>
-      <h2 class="node-title">الرؤية الفنية <span>تلتقي بالكفاءة والإنتاجية</span></h2>
+      <h2 class="node-title">عندما تلتقي الرؤية الفنية <span>بالكفاءة والإنتاجية</span></h2>
       <div class="node-bar"></div>
     </div>
     
     <div class="bio-quantum-layout">
       <div class="bio-quantum-text">
         <p>أنا <strong>محمد عاصم مرغم</strong>، مصمم جرافيك ومحترف وسائط متعددة بخبرة تتجاوز 5 سنوات في تقديم حلول التصميم الإبداعي ذات التأثير العالي لمختلف الشركات والقطاعات الفنية والتجارية.</p>
-        <p>لدي سجل حافل في إدارة المشاريع الفنية، زيادة التفاعل الإعلاني، وضمان الجودة المطبوعة والرقمية الخالية من الأخطاء، مع قدرة متقدمة على المزج بين الجمال البصري وأساسيات هندسة واجهات المستخدم والحلول التقنية.</p>
+        <p>أمتلك سجلاً حافلاً في إدارة المشاريع الفنية، زيادة التفاعل الإعلاني، وضمان أعلى معايير الجودة للمخرجات المطبوعة والرقمية، مع قدرة متقدمة على المزج بين الجمال البصري وأساسيات هندسة واجهات المستخدم والحلول التقنية.</p>
         
         <div class="identity-specs-box">
           <div class="spec-node-item">
@@ -410,7 +397,7 @@ footer span.tech-label { font-family: 'Orbitron', sans-serif; color: var(--neon-
       </div>
       
       <div class="bio-image-wrapper">
-        <img src="https://images.unsplash.com/photo-1542744094-3a31f103e35f?auto=format&fit=crop&w=600&q=80" alt="Design Environment">
+        <img src="  E:\my\محمد عصام\لار.jpeg"                                                                alt="Design Environment">
         <div class="bio-image-overlay"></div>
       </div>
     </div>
@@ -430,7 +417,7 @@ footer span.tech-label { font-family: 'Orbitron', sans-serif; color: var(--neon-
         <div class="service-bg-image" style="background-image: url('https://images.unsplash.com/photo-1509343256512-d77a5cb3791b?auto=format&fit=crop&w=600&q=80');"></div>
         <div class="srv-quantum-icon">🎨</div>
         <h3>التصميم البصري وبناء الهويات الاحترافية</h3>
-        <p>تطوير وصياغة الهويات البصرية والشعارات المتكاملة للشركات وحسابات التواصل الاجتماعي، مما يسهم مباشرة في رفع الوعي بالعلامة التجارية وزيادة جاذبيتها في السوق.</p>
+        <p>تطوير وصياغة الهويات البصرية والشعارات المتكاملة للشركات وحسابات التواصل الاجتماعي، مما يسهم مباشرة في رفع الوعي بالعلامة التجارية وزيادة تنافسيتها في السوق.</p>
         <div class="srv-tech-tags">
           <span class="srv-tag-pill">Visual Identity</span>
           <span class="srv-tag-pill">Branding</span>
@@ -441,7 +428,7 @@ footer span.tech-label { font-family: 'Orbitron', sans-serif; color: var(--neon-
         <div class="service-bg-image" style="background-image: url('https://images.unsplash.com/photo-1626785774573-4b799315345d?auto=format&fit=crop&w=600&q=80');"></div>
         <div class="srv-quantum-icon">📦</div>
         <h3>تصميم المطبوعات والتغليف الفني</h3>
-        <p>هندسة وتصميم المواد الدعائية والترويجية مثل البروشورات، اللوحات الإعلانية، وعبوات المنتجات المبتكرة مع الإشراف التقني على عمليات الطباعة لتقليل الأخطاء ورفع الكفاءة الفنية.</p>
+        <p>هندسة وتصميم المواد الدعائية والترويجية مثل البروشورات، واللوحات الإعلانية، وعبوات المنتجات المبتكرة، مع الإشراف التقني على عمليات الطباعة لضمان دقة التنفيذ.</p>
         <div class="srv-tech-tags">
           <span class="srv-tag-pill">Packaging</span>
           <span class="srv-tag-pill">Print Production</span>
@@ -452,7 +439,7 @@ footer span.tech-label { font-family: 'Orbitron', sans-serif; color: var(--neon-
         <div class="service-bg-image" style="background-image: url('https://images.unsplash.com/photo-1586717791821-3f44a563fa4c?auto=format&fit=crop&w=600&q=80');"></div>
         <div class="srv-quantum-icon">🎬</div>
         <h3>الموشن جرافيك والوسائط المتعددة</h3>
-        <p>إنتاج مقاطع الموشن جرافيك والمواد التسويقية المتحركة التي تساهم في إطلاق الحملات الإعلانية الناجحة ورفع نسب التفاعل والمبيعات الرقمية على شتى المنصات.</p>
+        <p>إنتاج مقاطع الموشن جرافيك والمواد التسويقية المتحركة التي تساهم في إطلاق الحملات الإعلانية الناجحة، ورفع نسب التفاعل والمبيعات على شتى المنصات الرقمية.</p>
         <div class="srv-tech-tags">
           <span class="srv-tag-pill">Motion Graphics</span>
           <span class="srv-tag-pill">Video Production</span>
@@ -463,7 +450,7 @@ footer span.tech-label { font-family: 'Orbitron', sans-serif; color: var(--neon-
         <div class="service-bg-image" style="background-image: url('https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=600&q=80');"></div>
         <div class="srv-quantum-icon">🌐</div>
         <h3>واجهات المستخدم وحلول التجارة الإلكترونية</h3>
-        <p>المساهمة في بناء وتصميم واجهات المواقع الإلكترونية مع ربط وتنسيق بيئات المتاجر الرقمية السريعة والمنصات البيعية لتحسين تجربة تصفح العميل للمنتجات البصرية.</p>
+        <p>المساهمة في بناء وتصميم واجهات المواقع الإلكترونية، مع تهيئة وتنسيق بيئات المتاجر الرقمية والمنصات البيعية لتحسين تجربة العميل ورحلة تصفحه للمنتجات.</p>
         <div class="srv-tech-tags">
           <span class="srv-tag-pill">UI/UX Basics</span>
           <span class="srv-tag-pill">HTML & CSS</span>
@@ -508,7 +495,7 @@ footer span.tech-label { font-family: 'Orbitron', sans-serif; color: var(--neon-
       <div class="skill-quantum-panel" style="grid-column: span 2;">
         <div class="skill-panel-node-title">مهارات القيادة والتوجيه الإبداعي</div>
         <div class="quantum-pills-flow" style="margin-bottom: 2.5rem;">
-          <span class="quantum-pill">إدارة المشاريع المتعددة وسرعة تسليم المنتجات الفنية</span>
+          <span class="quantum-pill">إدارة المشاريع المتعددة وسرعة تسليم المخرجات الفنية</span>
           <span class="quantum-pill">التفكير الإبداعي والتخطيط الاستراتيجي للحملات</span>
           <span class="quantum-pill">التدريب والتعليم (تقديم ورش عمل تفاعلية لتأهيل المصممين لسوق العمل)</span>
           <span class="quantum-pill">القيادة المؤسسية وبناء فرق العمل وتنسيق الجهود بين اللجان الفنية والتسويقية</span>
@@ -539,7 +526,7 @@ footer span.tech-label { font-family: 'Orbitron', sans-serif; color: var(--neon-
       <div class="edu-quantum-node">
         <div class="node-timeline-tag">UNIVERSITY</div>
         <span class="node-icon-display">🎓</span>
-        <h3 class="node-title-main">دبلوم الجرافيك ديزاين</h3>
+        <h3 class="node-title-main">دبلوم التصميم الجرافيكي</h3>
         <div class="node-institution-sub">جامعة صنعاء (Sana'a University)</div>
       </div>
       <div class="edu-quantum-node">
@@ -587,21 +574,23 @@ footer span.tech-label { font-family: 'Orbitron', sans-serif; color: var(--neon-
               <span class="console-row-value">behance.net/mohammedmerghm</span>
             </div>
           </a>
-          <div class="console-row-link" style="grid-column: span 2; text-align: right; background: rgba(255,255,255,0.01); border-color: rgba(0, 242, 254, 0.1);">
+          
+          <a href="https://wa.me/966538537364" target="_blank" class="console-row-link console-whatsapp-cyber-btn">
+            <div class="console-row-icon">💬</div>
+            <div>
+              <span class="console-row-label">رقم الهاتف وجوال الواتساب الفوري</span>
+              <span class="console-row-value" style="direction: ltr;">+966 53 853 7364</span>
+            </div>
+          </a>
+          
+          <div class="console-row-link">
             <div class="console-row-icon">🛰️</div>
             <div>
-              <span class="console-row-label">المنطقة الجغرافية ونطاق العمل الحالي</span>
-              <span class="console-row-value">المملكة العربية السعودية، المدينة المنورة (الجنسية: يمني)</span>
+              <span class="console-row-label">المنطقة الجغرافية ونطاق العمل</span>
+              <span class="console-row-value">المملكة العربية السعودية (Yemeni Nationality)</span>
             </div>
           </div>
         </div>
-
-        <a href="https://wa.me/966538537364" target="_blank" class="hologram-whatsapp-mega-btn">
-          <span class="whatsapp-icon-pulse">💬</span>
-          <span>تواصل فوري عبر الواتساب الفوري</span>
-          <span style="font-family:'Orbitron'; font-size:0.9rem;">➔</span>
-        </a>
-
       </div>
     </div>
   </div>
