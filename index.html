@@ -3,15 +3,14 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>MOHAMMED ASAM MERGH | 2050 Cyber Studio</title>
+<title>MOHAMMED ASAM MERGH | 2090 Cyber Studio</title>
 <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Tajawal:wght@300;500;700;900&display=swap" rel="stylesheet">
 <style>
 :root {
   --neon-cyan: #00f2fe;
   --neon-purple: #9d4edd;
   --neon-pink: #ff007f;
-  --bg-deep-space: #020205;
-  --cyber-matrix: rgba(0, 242, 254, 0.03);
+  --bg-deep-space: #03001e;
   --text-pure: #ffffff;
   --text-dim: #94a3b8;
   --transition-matrix: all 0.4s cubic-bezier(0.25, 1, 0.5, 1);
@@ -26,13 +25,16 @@ body {
   min-height: 100vh;
 }
 
-/* === خلفية الفضاء السايبيري لعام 2050 === */
 .space-quantum-bg {
   position: fixed; inset: 0; z-index: -3; pointer-events: none;
-  background: radial-gradient(circle at 50% 50%, #0c091f 0%, var(--bg-deep-space) 80%);
+  background: 
+    linear-gradient(to bottom, rgba(3, 0, 30, 0.8), rgba(5, 0, 15, 0.95)),
+    url('https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=1920&q=80');
+  background-size: cover;
+  background-position: center;
 }
 .sci-fi-grid {
-  position: fixed; inset: 0; z-index: -2; pointer-events: none; opacity: 0.08;
+  position: fixed; inset: 0; z-index: -2; pointer-events: none; opacity: 0.07;
   background-image: 
     linear-gradient(var(--neon-cyan) 1px, transparent 1px), 
     linear-gradient(90deg, var(--neon-cyan) 1px, transparent 1px);
@@ -40,302 +42,250 @@ body {
 }
 .quantum-glow-orb {
   position: fixed; width: 600px; height: 600px; border-radius: 50%; z-index: -1; pointer-events: none;
-  background: radial-gradient(circle, rgba(0,242,254,0.08) 0%, transparent 70%);
-  top: -200px; left: -200px; animation: floatOrb 20s infinite alternate ease-in-out;
+  background: radial-gradient(circle, rgba(0,242,254,0.15) 0%, transparent 70%);
+  top: -150px; left: -150px; animation: floatOrb 20s infinite alternate ease-in-out;
 }
 .quantum-glow-orb-2 {
   position: fixed; width: 500px; height: 500px; border-radius: 50%; z-index: -1; pointer-events: none;
-  background: radial-gradient(circle, rgba(157,78,221,0.06) 0%, transparent 70%);
-  bottom: -150px; right: -150px; animation: floatOrb 15s infinite alternate-reverse ease-in-out;
+  background: radial-gradient(circle, rgba(157,78,221,0.12) 0%, transparent 70%);
+  bottom: -100px; right: -100px; animation: floatOrb 15s infinite alternate-reverse ease-in-out;
 }
-@keyframes floatOrb { 0% { transform: translate(0, 0) scale(1); } 100% { transform: translate(80px, 50px) scale(1.2); } }
+@keyframes floatOrb { 0% { transform: translate(0, 0) scale(1); } 100% { transform: translate(60px, 40px) scale(1.15); } }
 
-/* === الهيدر المعلق الفضائي المحسن === */
 nav {
   position: fixed; top: 1.5rem; left: 2rem; right: 2rem; z-index: 1000;
   display: flex; align-items: center; justify-content: space-between;
-  padding: 1rem 3rem; background: rgba(2, 2, 5, 0.7);
+  padding: 1rem 3rem; background: rgba(3, 0, 30, 0.7);
   backdrop-filter: blur(25px); -webkit-backdrop-filter: blur(25px);
-  border: 1px solid rgba(0, 242, 254, 0.15); border-radius: 100px;
+  border: 1px solid rgba(0, 242, 254, 0.2); border-radius: 100px;
+  box-shadow: 0 0 30px rgba(157, 78, 221, 0.1);
 }
-
-/* التغيير الإبداعي للاسم (أكثر فخامة وعصرية) */
 .nav-cyber-identity {
-  font-family: 'Orbitron', sans-serif; font-size: 1.15rem; font-weight: 900;
-  color: var(--text-pure); text-decoration: none; letter-spacing: 4px;
+  font-family: 'Orbitron', sans-serif; font-size: 1.2rem; font-weight: 900;
+  color: var(--text-pure); text-decoration: none; letter-spacing: 3px;
   position: relative; padding-right: 15px;
 }
 .nav-cyber-identity::before {
   content: ''; position: absolute; right: 0; top: 25%; width: 4px; height: 50%;
-  background: var(--neon-cyan); box-shadow: 0 0 10px var(--neon-cyan);
+  background: var(--neon-cyan); box-shadow: 0 0 15px var(--neon-cyan);
 }
-.nav-cyber-identity span {
-  color: var(--neon-cyan); text-shadow: 0 0 10px rgba(0, 242, 254, 0.8);
-  animation: neonPulse 2s infinite alternate;
-}
-@keyframes neonPulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.7; } }
-
+.nav-cyber-identity span { color: var(--neon-cyan); text-shadow: 0 0 15px rgba(0, 242, 254, 0.8); }
 .nav-links { display: flex; gap: 2rem; list-style: none; }
-.nav-links a {
-  color: var(--text-dim); text-decoration: none; font-size: 0.9rem; font-weight: 500;
-  letter-spacing: 1px; transition: var(--transition-matrix);
-}
-.nav-links a:hover { color: var(--neon-cyan); text-shadow: 0 0 8px var(--neon-cyan); }
-
+.nav-links a { color: var(--text-dim); text-decoration: none; font-size: 0.9rem; font-weight: 500; transition: var(--transition-matrix); }
+.nav-links a:hover { color: var(--neon-cyan); text-shadow: 0 0 10px var(--neon-cyan); }
 .nav-action-hub {
-  background: transparent; border: 1px solid var(--neon-cyan); color: var(--neon-cyan);
-  padding: 8px 20px; border-radius: 50px; text-decoration: none; font-size: 0.85rem;
+  background: rgba(157, 78, 221, 0.1); border: 1px solid var(--neon-purple); color: #ffffff;
+  padding: 8px 22px; border-radius: 50px; text-decoration: none; font-size: 0.85rem;
   font-weight: 700; font-family: 'Orbitron', sans-serif; transition: var(--transition-matrix);
-  box-shadow: inset 0 0 8px rgba(0,242,254,0.1);
 }
-.nav-action-hub:hover {
-  background: var(--neon-cyan); color: var(--bg-deep-space);
-  box-shadow: 0 0 20px rgba(0, 242, 254, 0.5); transform: translateY(-2px);
-}
+.nav-action-hub:hover { background: var(--neon-cyan); color: #000; border-color: var(--neon-cyan); box-shadow: 0 0 25px rgba(0, 242, 254, 0.5); transform: translateY(-2px); }
 
-/* === هيرو واجهة عام 2050 الأسطورية === */
 .hero-quantum-deck {
   min-height: 100vh; display: flex; align-items: center; justify-content: center;
-  padding: 8rem 2rem 4rem; text-align: center; position: relative;
+  padding: 11rem 2rem 5rem; text-align: center; position: relative;
 }
-.hero-quantum-core { max-width: 1200px; z-index: 10; position: relative; }
+.hero-quantum-core { max-width: 1100px; z-index: 10; position: relative; width: 100%; }
 
-/* تصميم الاسم الرئيسي الجريء والمذهل */
+.mega-cyber-name-container {
+  position: relative;
+  display: inline-block;
+  margin-bottom: 1.5rem;
+  perspective: 1000px;
+}
 .mega-neon-moniker {
-  font-family: 'Orbitron', sans-serif; font-size: clamp(2.5rem, 7.5vw, 6.5rem);
-  font-weight: 900; text-transform: uppercase; letter-spacing: -1px; line-height: 0.95;
-  background: linear-gradient(180deg, #ffffff 30%, #7e8a99 100%);
-  -webkit-background-clip: text; -webkit-text-fill-color: transparent;
-  margin-bottom: 0.5rem; position: relative;
+  font-family: 'Orbitron', sans-serif;
+  font-size: clamp(2.2rem, 7.8vw, 6.2rem);
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  line-height: 1.1;
+  background: linear-gradient(135deg, #ffffff 40%, var(--neon-cyan) 70%, var(--neon-purple) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  position: relative;
+  z-index: 2;
+  animation: floatName 4s ease-in-out infinite alternate;
+  text-shadow: 0 0 40px rgba(0, 242, 254, 0.2);
 }
-.mega-neon-moniker::after {
-  content: 'MOHAMMED ASAM MERGH'; position: absolute; inset: 0; z-index: -1;
-  -webkit-text-stroke: 2px var(--neon-cyan); -webkit-background-clip: initial; -webkit-text-fill-color: transparent;
-  transform: translate(4px, 4px); opacity: 0.3; filter: blur(2px);
+.mega-cyber-name-container::before {
+  content: 'MOHAMMED ASAM MERGH';
+  position: absolute; inset: 0; z-index: 1;
+  font-family: 'Orbitron', sans-serif; font-size: clamp(2.2rem, 7.8vw, 6.2rem); font-weight: 900; letter-spacing: 2px; line-height: 1.1;
+  -webkit-text-stroke: 2px var(--node-color, var(--neon-purple));
+  -webkit-text-fill-color: transparent;
+  transform: translateZ(-20px) translate(4px, 4px);
+  opacity: 0.4; filter: blur(1px);
+  animation: glitchGlow 3s infinite alternate;
 }
+.mega-cyber-name-container::after {
+  content: 'MOHAMMED ASAM MERGH';
+  position: absolute; inset: 0; z-index: 0;
+  font-family: 'Orbitron', sans-serif; font-size: clamp(2.2rem, 7.8vw, 6.2rem); font-weight: 900; letter-spacing: 2px; line-height: 1.1;
+  -webkit-text-stroke: 1px var(--neon-pink);
+  -webkit-text-fill-color: transparent;
+  transform: translateZ(-40px) translate(-3px, -3px);
+  opacity: 0.25; filter: blur(3px);
+}
+
+@keyframes floatName {
+  0% { transform: translateY(0px) rotateX(2deg); }
+  100% { transform: translateY(-10px) rotateX(-2deg); }
+}
+@keyframes glitchGlow {
+  0%, 100% { filter: drop-shadow(0 0 10px var(--neon-purple)) brightness(1); }
+  50% { filter: drop-shadow(0 0 25px var(--neon-cyan)) brightness(1.3); }
+}
+
 .hero-quantum-tagline {
-  font-size: clamp(1.2rem, 2.5vw, 2.2rem); font-weight: 700; color: var(--neon-purple);
-  text-shadow: 0 0 15px rgba(157,78,221,0.4); margin-bottom: 2.5rem;
+  font-size: clamp(1.1rem, 2.5vw, 2rem); font-weight: 700; color: var(--neon-cyan);
+  text-shadow: 0 0 25px rgba(0,242,254,0.4); margin-bottom: 2.5rem;
 }
 .hero-quantum-summary {
-  font-size: clamp(1rem, 1.5vw, 1.25rem); color: var(--text-dim); max-width: 750px;
-  margin: 0 auto 3.5rem; line-height: 1.8; font-weight: 300;
+  font-size: clamp(1rem, 1.5vw, 1.25rem); color: var(--text-dim); max-width: 800px;
+  margin: 0 auto 3.5rem; line-height: 1.9; font-weight: 300;
 }
 
-/* الأزرار الهولوغرافية المستقبلية */
+.hero-btn-group { display: flex; justify-content: center; align-items: center; gap: 15px; flex-wrap: wrap; }
 .hologram-cta-btn {
-  background: linear-gradient(90deg, var(--neon-cyan), var(--neon-purple));
-  color: #000; padding: 18px 45px; border-radius: 4px; font-weight: 900;
-  font-size: 1.05rem; text-decoration: none; display: inline-flex; align-items: center; gap: 15px;
-  position: relative; transition: var(--transition-matrix); clip-path: polygon(10% 0%, 100% 0%, 90% 100%, 0% 100%);
+  background: linear-gradient(90deg, var(--neon-cyan), var(--neon-purple)); color: #000;
+  padding: 18px 45px; border-radius: 4px; font-weight: 900; font-size: 1.05rem;
+  text-decoration: none; display: inline-flex; align-items: center; gap: 12px;
+  transition: var(--transition-matrix); clip-path: polygon(8% 0%, 100% 0%, 92% 100%, 0% 100%);
+  box-shadow: 0 0 20px rgba(0, 242, 254, 0.3);
 }
-.hologram-cta-btn:hover {
-  transform: scale(1.05); filter: brightness(1.2); box-shadow: 0 0 30px rgba(0,242,254,0.4);
-}
+.hologram-cta-btn:hover { transform: scale(1.03); filter: brightness(1.2); box-shadow: 0 0 35px var(--neon-cyan); }
 .hologram-secondary-btn {
-  background: transparent; border: 1px solid rgba(255,255,255,0.15); color: var(--text-pure);
+  background: rgba(255,255,255,0.03); border: 1px solid rgba(0,242,254,0.3); color: var(--text-pure);
   padding: 18px 35px; border-radius: 4px; font-weight: 700; font-size: 0.95rem;
   text-decoration: none; display: inline-flex; align-items: center; transition: var(--transition-matrix);
-  clip-path: polygon(0 0, 90% 0, 100% 100%, 10% 100%); margin-right: 15px;
+  clip-path: polygon(0 0, 92% 0, 100% 100%, 8% 100%);
 }
-.hologram-secondary-btn:hover {
-  border-color: var(--neon-cyan); background: rgba(0,242,254,0.05);
-}
+.hologram-secondary-btn:hover { border-color: var(--neon-purple); background: rgba(157,78,221,0.15); box-shadow: 0 0 20px rgba(157,78,221,0.3); }
 
-/* لوحة البيانات والعدادات النيونية الحية */
-.cyber-metrics-rack {
-  display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.5rem; margin-top: 6rem;
-}
+.cyber-metrics-rack { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.5rem; margin-top: 6rem; }
 .metric-quantum-unit {
-  background: rgba(10, 10, 20, 0.4); border: 1px solid rgba(0, 242, 254, 0.1);
+  background: rgba(3, 0, 30, 0.6); border: 1px solid rgba(157, 78, 221, 0.2);
   padding: 2.5rem 1.5rem; border-radius: 8px; position: relative; overflow: hidden;
-  backdrop-filter: blur(10px); transition: var(--transition-matrix);
+  backdrop-filter: blur(15px); transition: var(--transition-matrix);
 }
-.metric-quantum-unit::before {
-  content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 2px;
-  background: linear-gradient(90deg, transparent, var(--neon-cyan), transparent);
-  transform: translateX(-100%); transition: var(--transition-matrix);
-}
-.metric-quantum-unit:hover {
-  border-color: rgba(0,242,254,0.3); transform: translateY(-5px); background: rgba(10, 10, 20, 0.7);
-}
-.metric-quantum-unit:hover::before { transform: translateX(100%); transition: 0.8s; }
+.metric-quantum-unit:hover { border-color: var(--neon-cyan); transform: translateY(-5px); box-shadow: 0 0 25px rgba(0, 242, 254, 0.15); }
 .metric-quantum-unit h3 {
-  font-family: 'Orbitron', sans-serif; font-size: 2.8rem; font-weight: 900;
-  color: var(--neon-cyan); margin-bottom: 5px; text-shadow: 0 0 10px rgba(0,242,254,0.3);
+  font-family: 'Orbitron', sans-serif; font-size: clamp(1.8rem, 3.5vw, 2.6rem); font-weight: 900;
+  color: var(--neon-cyan); margin-bottom: 5px; text-shadow: 0 0 15px rgba(0,242,254,0.4);
 }
 .metric-quantum-unit p { font-size: 0.85rem; color: var(--text-dim); line-height: 1.5; }
 
-/* === الأقسام واللوحات الهيكلية المستقيمة ذات الزوايا الحادة === */
 .matrix-section { padding: 6rem 2rem; position: relative; }
 .matrix-container { max-width: 1200px; margin: 0 auto; }
-.matrix-header-node { margin-bottom: 4rem; text-align: right; position: relative; }
-.node-index {
-  font-family: 'Orbitron', sans-serif; font-size: 0.85rem; color: var(--neon-cyan);
-  letter-spacing: 3px; display: block; margin-bottom: 0.5rem;
-}
-.node-title { font-size: 2.2rem; font-weight: 900; letter-spacing: -0.5px; }
-.node-title span { color: var(--neon-cyan); }
-.node-bar { width: 100px; height: 1px; background: var(--neon-cyan); margin-top: 1rem; box-shadow: 0 0 8px var(--neon-cyan); }
+.matrix-header-node { margin-bottom: 4rem; text-align: right; }
+.node-index { font-family: 'Orbitron', sans-serif; font-size: 0.85rem; color: var(--neon-purple); letter-spacing: 2px; display: block; margin-bottom: 0.5rem; }
+.node-title { font-size: clamp(1.5rem, 3.5vw, 2.2rem); font-weight: 900; }
+.node-title span { color: var(--neon-cyan); text-shadow: 0 0 15px rgba(0, 242, 254, 0.2); }
+.node-bar { width: 80px; height: 2px; background: linear-gradient(90deg, var(--neon-cyan), transparent); margin-top: 1rem; }
 
-/* === قسم قصة النجاح والنبذة === */
 .bio-quantum-layout { display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 4rem; align-items: center; }
 .bio-quantum-text p { color: var(--text-dim); line-height: 1.9; margin-bottom: 1.5rem; font-size: 1.05rem; }
-.bio-quantum-text strong { color: var(--neon-cyan); font-weight: 700; }
+.bio-quantum-text strong { color: var(--neon-cyan); }
 
 .identity-specs-box { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem; margin-top: 2.5rem; }
-.spec-node-item {
-  background: rgba(255,255,255,0.01); border-left: 2px solid var(--neon-purple);
-  padding: 1rem; transition: var(--transition-matrix);
-}
-.spec-node-item:hover { background: rgba(157,78,221,0.05); border-left-color: var(--neon-cyan); }
-.spec-node-label { font-size: 0.75rem; color: var(--neon-purple); font-weight: 700; margin-bottom: 4px; text-transform: uppercase; }
-.spec-node-value { font-size: 0.95rem; color: var(--text-pure); font-weight: 500; }
+.spec-node-item { background: rgba(255,255,255,0.02); border-right: 3px solid var(--neon-cyan); padding: 1rem; }
+.spec-node-label { font-size: 0.75rem; color: var(--text-dim); margin-bottom: 4px; }
+.spec-node-value { font-size: 0.95rem; color: #fff; font-weight: 700; word-break: break-all; }
 
-.hologram-quote-panel {
-  background: rgba(10,10,20,0.6); border: 1px solid rgba(157,78,221,0.2);
-  padding: 3rem; position: relative; border-radius: 4px;
+.bio-image-wrapper {
+  position: relative; width: 100%; height: 480px; border-radius: 12px; overflow: hidden;
+  border: 1px solid rgba(0, 242, 254, 0.4);
+  box-shadow: 0 0 30px rgba(0, 242, 254, 0.2);
 }
-.hologram-quote-panel::after {
-  content: '⚡ CORE_MISSION'; position: absolute; bottom: 10px; left: 15px;
-  font-family: 'Orbitron', sans-serif; font-size: 0.65rem; color: rgba(255,255,255,0.15); letter-spacing: 1px;
+.bio-image-wrapper img {
+  width: 100%; height: 100%; object-fit: cover;
+  filter: saturate(1.1) brightness(1.05); transition: var(--transition-matrix);
 }
-.hologram-quote-panel p { font-size: 1.15rem; line-height: 1.8; color: var(--text-pure); font-style: italic; }
+.bio-image-wrapper:hover img { transform: scale(1.03); filter: saturate(1.2); }
+.bio-image-overlay { position: absolute; inset: 0; background: linear-gradient(to top, rgba(3, 0, 30, 0.5), transparent); }
 
-/* === شبكة الخدمات اللامعة والذكية === */
 .services-quantum-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 2rem; }
 .service-quantum-card {
-  background: rgba(6, 6, 12, 0.5); border: 1px solid rgba(255,255,255,0.05);
-  padding: 3rem; position: relative; transition: var(--transition-matrix);
-  clip-path: polygon(0 0, 100% 0, 100% 90%, 92% 100%, 0 100%);
+  background: rgba(3, 0, 30, 0.5); border: 1px solid rgba(255,255,255,0.05);
+  padding: 3rem; position: relative; transition: var(--transition-matrix); overflow: hidden;
+  border-radius: 8px; z-index: 1;
 }
-.service-quantum-card::before {
-  content: ''; position: absolute; bottom: 0; left: 0; width: 30px; height: 30px;
-  background: transparent; border-left: 2px solid var(--neon-cyan); border-bottom: 2px solid var(--neon-cyan);
-  opacity: 0; transition: var(--transition-matrix);
+.service-bg-image {
+  position: absolute; inset: 0; z-index: -1; opacity: 0.08;
+  background-size: cover; background-position: center; transition: var(--transition-matrix);
 }
-.service-quantum-card:hover {
-  border-color: rgba(0,242,254,0.2); transform: translateY(-5px); background: rgba(6, 6, 12, 0.8);
-}
-.service-quantum-card:hover::before { opacity: 1; }
-.srv-quantum-icon {
-  font-size: 2rem; margin-bottom: 1.5rem; color: var(--neon-cyan); display: inline-block;
-  text-shadow: 0 0 15px rgba(0,242,254,0.4);
-}
-.service-quantum-card h3 { font-size: 1.35rem; font-weight: 800; margin-bottom: 1rem; color: var(--text-pure); }
+.service-quantum-card:hover .service-bg-image { opacity: 0.22; transform: scale(1.06); }
+.service-quantum-card:hover { border-color: var(--neon-cyan); transform: translateY(-5px); box-shadow: 0 15px 35px rgba(0, 242, 254, 0.1); }
+.srv-quantum-icon { font-size: 2.2rem; margin-bottom: 1.5rem; color: var(--neon-cyan); display: inline-block; }
+.service-quantum-card h3 { font-size: 1.4rem; font-weight: 800; margin-bottom: 1rem; }
 .service-quantum-card p { font-size: 0.95rem; color: var(--text-dim); line-height: 1.7; }
 .srv-tech-tags { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 2rem; }
-.srv-tag-pill {
-  font-family: 'Orbitron', sans-serif; font-size: 0.72rem; background: rgba(255,255,255,0.02);
-  border: 1px solid rgba(255,255,255,0.08); padding: 4px 12px; color: var(--text-dim);
-}
-.service-quantum-card:hover .srv-tag-pill { border-color: rgba(0,242,254,0.2); color: var(--neon-cyan); }
+.srv-tag-pill { font-family: 'Orbitron', sans-serif; font-size: 0.72rem; background: rgba(157,78,221,0.1); border: 1px solid rgba(157,78,221,0.2); padding: 4px 12px; color: #fff; }
 
-/* === ترسانة المهارات الكلية لعام 2050 === */
 .skills-quantum-dashboard { display: grid; grid-template-columns: repeat(2, 1fr); gap: 2rem; }
-.skill-quantum-panel {
-  background: rgba(10,10,20,0.4); border: 1px solid rgba(255,255,255,0.04);
-  padding: 3rem; border-radius: 4px; position: relative;
-}
-.skill-panel-node-title {
-  font-family: 'Orbitron', sans-serif; font-size: 0.8rem; color: var(--neon-cyan);
-  font-weight: 700; letter-spacing: 2px; margin-bottom: 2rem; text-transform: uppercase;
-  display: flex; align-items: center; gap: 10px;
-}
-.skill-panel-node-title::after { content: ''; flex: 1; height: 1px; background: rgba(0,242,254,0.1); }
+.skill-quantum-panel { background: rgba(3, 0, 30, 0.5); border: 1px solid rgba(255,255,255,0.05); padding: 3rem; border-radius: 8px; }
+.skill-panel-node-title { font-family: 'Orbitron', sans-serif; font-size: 0.85rem; color: var(--neon-cyan); font-weight: 700; letter-spacing: 1px; margin-bottom: 2rem; display: flex; align-items: center; gap: 10px; }
+.skill-panel-node-title::after { content: ''; flex: 1; height: 1px; background: rgba(0,242,254,0.15); }
 .quantum-pills-flow { display: flex; flex-wrap: wrap; gap: 10px; }
-.quantum-pill {
-  background: rgba(255,255,255,0.01); border: 1px solid rgba(255,255,255,0.06);
-  padding: 12px 20px; font-size: 0.85rem; color: var(--text-dim); transition: var(--transition-matrix);
-}
-.quantum-pill:hover {
-  border-color: var(--neon-cyan); color: var(--neon-cyan); background: rgba(0,242,254,0.05);
-  box-shadow: 0 0 15px rgba(0,242,254,0.1); transform: scale(1.03);
-}
-.quantum-pill.highlighted-node {
-  border-color: var(--neon-purple); color: var(--neon-purple); background: rgba(157,78,221,0.05);
-}
-.quantum-pill.highlighted-node:hover {
-  border-color: var(--neon-cyan); color: var(--neon-cyan);
-}
+.quantum-pill { background: rgba(255,255,255,0.02); border: 1px solid rgba(255,255,255,0.08); padding: 12px 20px; font-size: 0.85rem; color: var(--text-dim); transition: var(--transition-matrix); }
+.quantum-pill:hover { border-color: var(--neon-cyan); color: #fff; background: rgba(0,242,254,0.1); }
+.quantum-pill.highlighted-node { border-color: var(--neon-purple); background: rgba(157,78,221,0.1); color: #fff; }
 
 .tools-quantum-flex { display: grid; grid-template-columns: repeat(5, 1fr); gap: 1rem; }
-.tool-quantum-card {
-  background: rgba(0,0,0,0.2); border: 1px solid rgba(255,255,255,0.03);
-  padding: 1.5rem 1rem; text-align: center; transition: var(--transition-matrix);
-}
-.tool-quantum-card:hover {
-  border-color: var(--neon-cyan); background: rgba(0,242,254,0.02); transform: translateY(-4px);
-}
+.tool-quantum-card { background: rgba(0,0,0,0.2); border: 1px solid rgba(255,255,255,0.04); padding: 1.5rem 1rem; text-align: center; border-radius: 4px; }
+.tool-quantum-card:hover { border-color: var(--neon-purple); background: rgba(157,78,221,0.05); }
 .tool-icon-quantum { font-size: 1.8rem; margin-bottom: 10px; display: block; }
-.tool-name-quantum { font-size: 0.75rem; color: var(--text-dim); font-weight: 600; }
+.tool-name-quantum { font-size: 0.75rem; color: var(--text-dim); }
 
-/* === مسار التراخيص والتعليم المعتمد المتوهج === */
 .edu-matrix-deck { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; }
-.edu-quantum-node {
-  background: rgba(6,6,12,0.4); border: 1px solid rgba(255,255,255,0.04);
-  padding: 2.5rem; position: relative; transition: var(--transition-matrix);
-}
-.edu-quantum-node:hover {
-  border-color: var(--neon-purple); background: rgba(10,10,20,0.7); transform: translateY(-5px);
-}
-.node-timeline-tag {
-  position: absolute; top: 1.5rem; left: 1.5rem; font-family: 'Orbitron', sans-serif;
-  font-size: 0.68rem; color: var(--neon-cyan); font-weight: 700;
-}
+.edu-quantum-node { background: rgba(3,0,30,0.5); border: 1px solid rgba(157,78,221,0.15); padding: 2.5rem; position: relative; border-radius: 8px; }
+.edu-quantum-node:hover { border-color: var(--neon-cyan); box-shadow: 0 10px 25px rgba(0, 242, 254, 0.1); }
+.node-timeline-tag { position: absolute; top: 1.5rem; left: 1.5rem; font-family: 'Orbitron', sans-serif; font-size: 0.68rem; color: var(--neon-cyan); font-weight: 700; }
 .node-icon-display { font-size: 2.2rem; margin-bottom: 1.5rem; display: block; }
 .node-title-main { font-size: 1.1rem; font-weight: 800; margin-bottom: 0.5rem; line-height: 1.5; }
-.node-institution-sub { font-size: 0.85rem; color: var(--neon-cyan); font-weight: 500; margin-bottom: 4px; }
-.node-meta-time { font-family: 'Orbitron', sans-serif; font-size: 0.75rem; color: var(--text-dim); }
+.node-institution-sub { font-size: 0.85rem; color: var(--neon-purple); font-weight: 600; }
 
-/* === محطة الاتصال اللانهائية وبدء المشاريع === */
 .terminal-contact-console {
-  background: linear-gradient(180deg, rgba(8,8,16,0.6) 0%, rgba(2,2,5,0.95) 100%);
-  border: 1px solid rgba(0,242,254,0.15); padding: 5rem 4rem; position: relative;
-  box-shadow: 0 20px 50px rgba(0,0,0,0.5); overflow: hidden;
+  background: linear-gradient(180deg, rgba(3,0,30,0.7) 0%, rgba(5,0,15,0.98) 100%),
+              url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=1200&q=80');
+  background-size: cover; background-position: center;
+  border: 1px solid rgba(0,242,254,0.25); padding: 5rem 4rem; position: relative; border-radius: 12px;
+  box-shadow: 0 25px 60px rgba(0,0,0,0.5); overflow: hidden; z-index: 1;
 }
 .terminal-console-inner { position: relative; z-index: 5; text-align: center; max-width: 850px; margin: 0 auto; }
-
 .console-links-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.5rem; margin: 3.5rem 0; text-align: right; }
-.console-row-link {
-  background: rgba(255,255,255,0.01); border: 1px solid rgba(255,255,255,0.04);
-  padding: 1.5rem; display: flex; align-items: center; gap: 1.2rem; text-decoration: none;
-  transition: var(--transition-matrix);
-}
-.console-row-link:hover {
-  background: rgba(0,242,254,0.03); border-color: var(--neon-cyan); transform: translateX(-5px);
-}
-.console-row-icon { font-size: 1.5rem; color: var(--neon-cyan); text-shadow: 0 0 8px var(--neon-cyan); }
-.console-row-label { font-size: 0.75rem; color: var(--text-dim); font-weight: 700; margin-bottom: 3px; display: block; }
-.console-row-value { font-size: 0.95rem; color: var(--text-pure); font-weight: 600; word-break: break-all; }
+.console-row-link { background: rgba(3,0,30,0.8); border: 1px solid rgba(255,255,255,0.05); padding: 1.5rem; display: flex; align-items: center; gap: 1.2rem; text-decoration: none; border-radius: 6px; }
+.console-row-link:hover { border-color: var(--neon-cyan); background: rgba(0,242,254,0.05); transform: translateX(-4px); }
+.console-row-icon { font-size: 1.5rem; color: var(--neon-cyan); }
+.console-row-label { font-size: 0.75rem; color: var(--text-dim); display: block; margin-bottom: 3px; }
+.console-row-value { font-size: 0.95rem; color: #fff; font-weight: 600; word-break: break-all; }
 
-/* === الفوتر التكنولوجي الموحد === */
-footer {
-  padding: 3rem 4rem; background: #010103; border-top: 1px solid rgba(255,255,255,0.02);
-  display: flex; justify-content: space-between; align-items: center;
-}
+footer { padding: 3rem 4rem; background: #02000a; border-top: 1px solid rgba(255,255,255,0.03); display: flex; justify-content: space-between; align-items: center; }
 footer p { font-size: 0.85rem; color: var(--text-dim); }
-footer .author-token { color: var(--neon-cyan); font-weight: 700; font-family: 'Tajawal', sans-serif; }
-footer span.tech-label { font-family: 'Orbitron', sans-serif; color: var(--neon-purple); font-weight: 700; letter-spacing: 1px; }
+footer .author-token { color: var(--neon-cyan); font-weight: 700; }
+footer span.tech-label { font-family: 'Orbitron', sans-serif; color: var(--neon-purple); font-weight: 700; }
 
-/* حركات التلاشي الميكانيكية للقطع البرمجية */
-.matrix-fade { opacity: 0; transform: translateY(20px); transition: opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1), transform 0.6s cubic-bezier(0.16, 1, 0.3, 1); }
-.matrix-fade.engaged { opacity: 1; transform: translateY(0); }
+.matrix-fade { opacity: 1; transform: translateY(0); transition: opacity 0.6s ease, transform 0.6s ease; }
 
-/* === استجابة الهواتف والأجهزة الذكية المتنقلة === */
 @media (max-width: 950px) {
-  nav { left: 1rem; right: 1rem; padding: 1rem 1.5rem; }
+  nav { top: 1rem; left: 1rem; right: 1rem; padding: 0.8rem 1.5rem; border-radius: 30px; }
   .nav-links { display: none; }
-  .matrix-section { padding: 4rem 1rem; }
-  .hero-quantum-deck { padding: 8rem 1rem 3rem; }
-  .bio-quantum-layout { grid-template-columns: 1fr; gap: 3rem; }
-  .services-quantum-grid { grid-template-columns: 1fr; }
-  .skills-quantum-dashboard { grid-template-columns: 1fr; }
-  .tools-quantum-flex { grid-template-columns: repeat(3, 1fr); }
-  .edu-matrix-deck { grid-template-columns: 1fr; }
+  .matrix-section { padding: 4rem 1.2rem; }
+  .hero-quantum-deck { padding: 9rem 1.2rem 3rem; min-height: auto; }
+  .hero-btn-group { flex-direction: column; width: 100%; gap: 12px; }
+  .hologram-cta-btn, .hologram-secondary-btn { width: 100%; justify-content: center; padding: 15px 20px; font-size: 0.95rem; clip-path: none; border-radius: 4px; }
+  .cyber-metrics-rack { grid-template-columns: repeat(2, 1fr); gap: 1rem; margin-top: 4rem; }
+  .bio-quantum-layout { grid-template-columns: 1fr; gap: 2.5rem; }
+  .bio-image-wrapper { height: 380px; }
+  .identity-specs-box { grid-template-columns: 1fr; gap: 0.8rem; }
+  .services-quantum-grid { grid-template-columns: 1fr; gap: 1.5rem; }
+  .service-quantum-card { padding: 2rem 1.5rem; }
+  .skills-quantum-dashboard { grid-template-columns: 1fr; gap: 1.5rem; }
+  .skill-quantum-panel { padding: 2rem 1.2rem; }
+  .tools-quantum-flex { grid-template-columns: repeat(3, 1fr); gap: 0.8rem; }
+  .edu-matrix-deck { grid-template-columns: 1fr; gap: 1.2rem; }
+  .terminal-contact-console { padding: 3rem 1.2rem; }
   .console-links-grid { grid-template-columns: 1fr; gap: 1rem; }
-  .cyber-metrics-rack { grid-template-columns: repeat(2, 1fr); gap: 1rem; }
-  .terminal-contact-console { padding: 3rem 1.5rem; }
   footer { flex-direction: column; gap: 1rem; text-align: center; padding: 2.5rem 1rem; }
 }
 </style>
@@ -362,13 +312,17 @@ footer span.tech-label { font-family: 'Orbitron', sans-serif; color: var(--neon-
 <div class="hero-quantum-deck" id="home">
   <div class="hero-quantum-core">
     <p style="margin-bottom:0.8rem; color:var(--neon-cyan); font-family: 'Orbitron', sans-serif; letter-spacing: 3px; font-size:0.85rem;">SYSTEM.INITIALIZED // OVER 5 YEARS EXP</p>
-    <h1 class="mega-neon-moniker">[cite: 1] MOHAMMED ASAM MERGH</h1>
+    
+    <div class="mega-cyber-name-container">
+      <h1 class="mega-neon-moniker">MOHAMMED ASAM MERGH</h1>
+    </div>
+
     <h2 class="hero-quantum-tagline">مطور ويب متكامل · مصمم بصري وحلول ذكاء اصطناعي عصرية</h2>
     <p class="hero-quantum-summary">
-      أدمج بين قوة الأكواد البرمجية وهندسة الحلول الذكية مع سحر الهويات البصرية المبتكرة لصناعة تجارب رقمية خارقة للمستقبل — من قلب المدينة المنورة إلى أفق العالم التقني.
+      أدمج بين قوة الأكواد البرمجية وهندسة الحلول الرقمية مع سحر الهويات البصرية المبتكرة لصناعة تجارب رقمية خارقة للمستقبل — من قلب المدينة المنورة إلى أفق العالم التقني.
     </p>
     
-    <div>
+    <div class="hero-btn-group">
       <a href="#contact" class="hologram-cta-btn">
         <span>تواصل فوري مستقبلي</span>
         <span style="font-family:'Orbitron'; font-size:0.85rem;">➔</span>
@@ -379,19 +333,19 @@ footer span.tech-label { font-family: 'Orbitron', sans-serif; color: var(--neon-
     <div class="cyber-metrics-rack">
       <div class="metric-quantum-unit">
         <h3>+١٥٠</h3>
-        <p>مشروع هوية وتصميم بصري متكامل تم تنفيذه [cite: 10]</p>
+        <p>مشروع هوية وتصميم بصري متكامل تم تنفيذه</p>
       </div>
       <div class="metric-quantum-unit">
         <h3>+٤٠٪</h3>
-        <p>زيادة تفاعل حسابات العملاء والأداء المرئي الموثق [cite: 11]</p>
+        <p>زيادة تفاعل حسابات العملاء والأداء المرئي الموثق</p>
       </div>
       <div class="metric-quantum-unit">
         <h3>+١٠٠</h3>
-        <p>متدرب تم تدريبهم وتطوير قدراتهم على أدوات أدوبي [cite: 18]</p>
+        <p>متدرب تم تدريبهم وتطوير قدراتهم على أدوات أدوبي</p>
       </div>
       <div class="metric-quantum-unit">
         <h3>٩٥٪</h3>
-        <p>معدل رضا العملاء التراكمي في منصات العمل [cite: 12]</p>
+        <p>معدل رضا العملاء التراكمي في منصات العمل</p>
       </div>
     </div>
   </div>
@@ -407,31 +361,32 @@ footer span.tech-label { font-family: 'Orbitron', sans-serif; color: var(--neon-
     
     <div class="bio-quantum-layout">
       <div class="bio-quantum-text matrix-fade">
-        <p>أنا [cite: 1] <strong>محمد مرغم</strong>، مصمم جرافيك ومحترف وسائط متعددة ومطور ويب متكامل (Full-Stack)، مقيم حالياً في <strong>المدينة المنورة، المملكة العربية السعودية</strong> ومستقر بها كلياً لتلبية احتياجات السوق السعودي والخليجي المتطور.</p>
+        <p>أنا <strong>محمد مرغم</strong>، مصمم جرافيك ومحترف وسائط متعددة ومطور ويب متكامل (Full-Stack)، مقيم حالياً في <strong>المدينة المنورة، المملكة العربية السعودية</strong> ومستقر بها كلياً لتلبية احتياجات السوق السعودي والخليجي المتطور.</p>
         <p>لدي شغف لا ينتهي بابتكار وتطوير <strong>أنظمة رقمية ذكية</strong>، تجمع بكفاءة غير مسبوقة بين قوة الكود المنطقي وحماية الواجهات الخلفية (Backend Layouts) وبين مرونة وجمال واجهات تجارب المستخدم البصرية المذهلة.</p>
         
         <div class="identity-specs-box">
           <div class="spec-node-item">
             <div class="spec-node-label">الاسم المهني المعتمد</div>
-            <div class="spec-node-value">[cite: 1] MOHAMMED ASAM MERGH</div>
+            <div class="spec-node-value">MOHAMMED ASAM MERGH</div>
           </div>
           <div class="spec-node-item">
             <div class="spec-node-label">الجنسية الرسمية</div>
-            <div class="spec-node-value">[cite: 2] يمني (Yemeni)</div>
+            <div class="spec-node-value">يمني (Yemeni)</div>
           </div>
           <div class="spec-node-item">
-            <div class="spec-node-label">القناة الموحدة والمعرّف</div>
+            <div class="spec-node-label">المعرف وقناة التواصل</div>
             <div class="spec-node-value">@m_pari / m_pari.z</div>
           </div>
           <div class="spec-node-item">
             <div class="spec-node-label">قناة البريد الإلكتروني</div>
-            <div class="spec-node-value" style="font-family:'Orbitron'; font-size:0.78rem;">[cite: 2] mohammedasmmerghm@gmail.com</div>
+            <div class="spec-node-value" style="font-family:'Orbitron'; font-size:0.78rem;">mohammedasmmerghm@gmail.com</div>
           </div>
         </div>
       </div>
       
-      <div class="hologram-quote-panel matrix-fade">
-        <p>"أقود مشاريع التصميم وتطوير المواقع تحت أقصى درجات ضغط العمل البرمجي، بهدف واحد ثابت: تحقيق مخرجات رقمية إبداعية تسبق عصرنا الحالي لتبهر الجميع وتصنع الفارق التجاري الحقيقي للشركات."</p>
+      <div class="bio-image-wrapper matrix-fade">
+        <img src=" E:\my\محمد عصام\لار.jpeg"                                               alt="MOHAMMED ASAM MERGH">
+        <div class="bio-image-overlay"></div>
       </div>
     </div>
   </div>
@@ -447,6 +402,7 @@ footer span.tech-label { font-family: 'Orbitron', sans-serif; color: var(--neon-
     
     <div class="services-quantum-grid">
       <div class="service-quantum-card matrix-fade">
+        <div class="service-bg-image" style="background-image: url('https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=600&q=80');"></div>
         <div class="srv-quantum-icon">⚙️</div>
         <h3>هندسة وتطوير البرمجيات ومواقع الويب</h3>
         <p>تصميم وبناء الأنظمة وتطبيقات الويب المتكاملة مع لوحات تحكم متقدمة باستخدام أحدث أطر العمل العالمية القوية، بالإضافة لربط وتخصيص بيئات المتاجر الرقمية السريعة بالكامل لرفع معدلات البيع.</p>
@@ -455,40 +411,38 @@ footer span.tech-label { font-family: 'Orbitron', sans-serif; color: var(--neon-
           <span class="srv-tag-pill">Laravel</span>
           <span class="srv-tag-pill">PHP</span>
           <span class="srv-tag-pill">MySQL</span>
-          <span class="srv-tag-pill">JavaScript</span>
         </div>
       </div>
       <div class="service-quantum-card matrix-fade">
+        <div class="service-bg-image" style="background-image: url('https://images.unsplash.com/photo-1509343256512-d77a5cb3791b?auto=format&fit=crop&w=600&q=80');"></div>
         <div class="srv-quantum-icon">⚡</div>
         <h3>التصميم البصري وبناء الهويات الاحترافية</h3>
         <p>صياغة خطوط ومفاهيم الهويات البصرية المتكاملة والشعارات المستدامة للشركات مع هندسة وتجهيز العبوات والمطبوعات الإعلانية المبتكرة الخالية من الأخطاء الفنية المصنعية.</p>
         <div class="srv-tech-tags">
-          <span class="srv-tag-pill">Graphic Design [cite: 42]</span>
-          <span class="srv-tag-pill">Adobe Photoshop [cite: 43]</span>
-          <span class="srv-tag-pill">Adobe Illustrator [cite: 43]</span>
-          <span class="srv-tag-pill">Product Packaging [cite: 23]</span>
+          <span class="srv-tag-pill">Graphic Design</span>
+          <span class="srv-tag-pill">Photoshop</span>
+          <span class="srv-tag-pill">Illustrator</span>
         </div>
       </div>
       <div class="service-quantum-card matrix-fade">
+        <div class="service-bg-image" style="background-image: url('https://images.unsplash.com/photo-1586717791821-3f44a563fa4c?auto=format&fit=crop&w=600&q=80');"></div>
         <div class="srv-quantum-icon">👁️</div>
         <h3>تصميم واجهات المستخدم (UI/UX Layouts)</h3>
         <p>بناء وهيكلة رحلة المستخدم داخل المواقع عبر نماذج تفاعلية مرنة ومدروسة سلوكياً تضمن تقديم واجهات مريحة وسهلة الاستخدام تزيد من ثقة وولاء العملاء لمنصتك التقنية.</p>
         <div class="srv-tech-tags">
           <span class="srv-tag-pill">Figma Terminal</span>
-          <span class="srv-tag-pill">UI/UX Layouts</span>
-          <span class="srv-tag-pill">Web Interface Development [cite: 6]</span>
-          <span class="srv-tag-pill">HTML5 & CSS3 [cite: 36]</span>
+          <span class="srv-tag-pill">HTML5 & CSS3</span>
         </div>
       </div>
       <div class="service-quantum-card matrix-fade">
+        <div class="service-bg-image" style="background-image: url('https://images.unsplash.com/photo-1622737133809-d95047b9e673?auto=format&fit=crop&w=600&q=80');"></div>
         <div class="srv-quantum-icon">🎬</div>
-        <h3>صناعة الفيديو والموشن جرافيك والتسويق الرقمي</h3>
-        <p>إنتاج وصناعة مواد تسويقية مرئية ومقاطع موشن جرافيك عالية الجودة تساهم بفاعلية في إدارة الحملات الإعلانية ورفع التفاعل والوصول لأقوى شريحة مستهدفة.</p>
+        <h3>صناعة الفيديو والموشن جرافيك والتسويق</h3>
+        <p>إنتاج وصناعة مواد تسويقية مرئية ومقاطع موشن جرافيك وفيديوهات عالية الجودة (Video Editing) تساهم بفاعلية في إدارة الحملات الإعلانية ورفع التفاعل.</p>
         <div class="srv-tech-tags">
-          <span class="srv-tag-pill">Motion Graphics [cite: 44]</span>
+          <span class="srv-tag-pill">Motion Graphics</span>
+          <span class="srv-tag-pill">After Effects</span>
           <span class="srv-tag-pill">Premiere Pro</span>
-          <span class="srv-tag-pill">After Effects [cite: 44]</span>
-          <span class="srv-tag-pill">Digital Marketing [cite: 30]</span>
         </div>
       </div>
     </div>
@@ -512,56 +466,37 @@ footer span.tech-label { font-family: 'Orbitron', sans-serif; color: var(--neon-
           <span class="quantum-pill">PHP Web Architect</span>
           <span class="quantum-pill">MySQL Engine</span>
           <span class="quantum-pill">JavaScript Ecosystem</span>
-          <span class="quantum-pill">HTML5 / CSS3 Layouts [cite: 36]</span>
-          <span class="quantum-pill">Web Basics [cite: 45]</span>
+          <span class="quantum-pill">HTML5 / CSS3 Layouts</span>
         </div>
       </div>
       
       <div class="skill-quantum-panel matrix-fade">
         <div class="skill-panel-node-title">الإبداع البصري والمونتاج الفني المتكامل</div>
         <div class="quantum-pills-flow">
-          <span class="quantum-pill highlighted-node">Adobe Photoshop [cite: 43]</span>
-          <span class="quantum-pill highlighted-node">Adobe Illustrator [cite: 43]</span>
-          <span class="quantum-pill highlighted-node">Adobe After Effects [cite: 44]</span>
-          <span class="quantum-pill highlighted-node">Adobe Premiere Pro [cite: 44]</span>
+          <span class="quantum-pill highlighted-node">Adobe Photoshop</span>
+          <span class="quantum-pill highlighted-node">Adobe Illustrator</span>
+          <span class="quantum-pill highlighted-node">Adobe After Effects</span>
+          <span class="quantum-pill highlighted-node">Adobe Premiere Pro</span>
           <span class="quantum-pill">Adobe InDesign</span>
-          <span class="quantum-pill">Adobe Lightroom</span>
-          <span class="quantum-pill">Visual Performance Tools [cite: 5]</span>
         </div>
       </div>
       
       <div class="skill-quantum-panel matrix-fade" style="grid-column: span 2;">
-        <div class="skill-panel-node-title">مهارات القيادة وإدارة المشاريع الرقمية المعقدة والأنظمة التشغيلية</div>
+        <div class="skill-panel-node-title">مهارات القيادة وإدارة المشاريع والأنظمة</div>
         <div class="quantum-pills-flow" style="margin-bottom: 2.5rem;">
-          <span class="quantum-pill">التخطيط الاستراتيجي المستقبلي (Strategic Planning) [cite: 53]</span>
-          <span class="quantum-pill">التفكير الإبداعي وحل المعضلات الفنية المعقدة (Creative Thinking) [cite: 53]</span>
-          <span class="quantum-pill">القيادة المؤسسية وبناء فرق العمل الشابة (Institutional Leadership) [cite: 54]</span>
-          <span class="quantum-pill">الدعم الفني، الصيانة وحل مشاكل الأنظمة (Technical Support) [cite: 46]</span>
-          <span class="quantum-pill">إدارة المخازن والعمليات والمستودعات بدقة فائقة [cite: 26]</span>
+          <span class="quantum-pill">التخطيط الاستراتيجي المستقبلي (Strategic Planning)</span>
+          <span class="quantum-pill">التفكير الإبداعي وحل المعضلات الفنية المعقدة</span>
+          <span class="quantum-pill">الالتحاق بالبرامج القيادية وبناء فرق العمل المشتركة</span>
+          <span class="quantum-pill">الدعم الفني والتحليل البرمجي وحل مشاكل واجهات الأنظمة بكفاءة عالية</span>
         </div>
         
-        <div class="skill-panel-node-title">المنصات السحابية وبيئات التطوير الأسرع استخداماً عالمياً</div>
+        <div class="skill-panel-node-title">المنصات السحابية وبيئات التطوير السريعة عالمياً</div>
         <div class="tools-quantum-flex">
-          <div class="tool-quantum-card">
-            <span class="tool-icon-quantum">🛒</span>
-            <span class="tool-name-quantum">منصة سلة [cite: 49]</span>
-          </div>
-          <div class="tool-quantum-card">
-            <span class="tool-icon-quantum">🏪</span>
-            <span class="tool-name-quantum">منصة زد [cite: 49]</span>
-          </div>
-          <div class="tool-quantum-card">
-            <span class="tool-icon-quantum">🌐</span>
-            <span class="tool-name-quantum">WordPress Hub</span>
-          </div>
-          <div class="tool-quantum-card">
-            <span class="tool-icon-quantum">💻</span>
-            <span class="tool-name-quantum">VS Code Terminal</span>
-          </div>
-          <div class="tool-quantum-card">
-            <span class="tool-icon-quantum">💎</span>
-            <span class="tool-name-quantum">Figma Space</span>
-          </div>
+          <div class="tool-quantum-card"><span class="tool-icon-quantum">🛒</span><span class="tool-name-quantum">منصة سلة</span></div>
+          <div class="tool-quantum-card"><span class="tool-icon-quantum">🏪</span><span class="tool-name-quantum">منصة زد</span></div>
+          <div class="tool-quantum-card"><span class="tool-icon-quantum">🌐</span><span class="tool-name-quantum">WordPress</span></div>
+          <div class="tool-quantum-card"><span class="tool-icon-quantum">💻</span><span class="tool-name-quantum">VS Code</span></div>
+          <div class="tool-quantum-card"><span class="tool-icon-quantum">💎</span><span class="tool-name-quantum">Figma Hub</span></div>
         </div>
       </div>
     </div>
@@ -580,25 +515,20 @@ footer span.tech-label { font-family: 'Orbitron', sans-serif; color: var(--neon-
       <div class="edu-quantum-node matrix-fade">
         <div class="node-timeline-tag">ADOBE CO</div>
         <span class="node-icon-display">🏆</span>
-        <span class="node-meta-time">INTERNATIONAL COMPLIANCE</span>
         <h3 class="node-title-main">شهادة خبير معتمد دولياً من شركة أدوبي العالمية</h3>
-        <div class="node-institution-sub">Adobe International Certificate [cite: 52]</div>
+        <div class="node-institution-sub">Adobe International Certificate</div>
       </div>
-      
       <div class="edu-quantum-node matrix-fade">
         <div class="node-timeline-tag">UNIVERSITY</div>
         <span class="node-icon-display">🎓</span>
-        <span class="node-meta-time">ACADEMIC GRADUATE</span>
         <h3 class="node-title-main">دبلوم الجرافيك ديزاين والوسائط المتعددة</h3>
-        <div class="node-institution-sub">جامعة صنعاء (Sana'a University) [cite: 51]</div>
+        <div class="node-institution-sub">جامعة صنعاء (Sana'a University)</div>
       </div>
-      
       <div class="edu-quantum-node matrix-fade">
         <div class="node-timeline-tag">ICDL CO</div>
         <span class="node-icon-display">💾</span>
-        <span class="node-meta-time">GLOBAL CERTIFICATE</span>
         <h3 class="node-title-main">الرخصة الدولية لقيادة الحاسب الآلي المعتمدة</h3>
-        <div class="node-institution-sub">ICDL Global Authority [cite: 52]</div>
+        <div class="node-institution-sub">ICDL Global Authority</div>
       </div>
     </div>
   </div>
@@ -607,7 +537,7 @@ footer span.tech-label { font-family: 'Orbitron', sans-serif; color: var(--neon-
 <div class="matrix-section" id="contact">
   <div class="matrix-container">
     <div class="matrix-header-node" style="text-align: center;">
-      <span class="node-index">// ESTABLISH ENCRYPTED CONNECTION</span>
+      <span class="node-index">// ESTABLISH SECURE LINK</span>
       <h2 class="node-title">ابدأ تحويل مشروعك <span>إلى واقع مستقبلي مذهل الآن</span></h2>
       <div class="node-bar" style="margin: 1rem auto 0;"></div>
     </div>
@@ -623,63 +553,39 @@ footer span.tech-label { font-family: 'Orbitron', sans-serif; color: var(--neon-
             <div class="console-row-icon">✉️</div>
             <div>
               <span class="console-row-label">البريد الإلكتروني الرسمي المباشر</span>
-              <span class="console-row-value">[cite: 2] mohammedasmmerghm@gmail.com</span>
+              <span class="console-row-value">mohammedasmmerghm@gmail.com</span>
             </div>
           </a>
-          
           <a href="https://www.behance.net/mohammedmerghm" target="_blank" class="console-row-link">
             <div class="console-row-icon">💼</div>
             <div>
-              <span class="console-row-label">معرض الأعمال الاحترافي العالمي (Behance)</span>
+              <span class="console-row-label">معرض الأعمال الاحترافي (Behance)</span>
               <span class="console-row-value">behance.net/mohammedmerghm</span>
             </div>
           </a>
-          
           <a href="https://wa.me/966538537364" target="_blank" class="console-row-link">
             <div class="console-row-icon">📱</div>
             <div>
               <span class="console-row-label">رقم الهاتف وجوال الواتساب الفوري</span>
-              <span class="console-row-value" style="direction: ltr;">[cite: 2] +966 53 853 7364</span>
+              <span class="console-row-value" style="direction: ltr;">+966 53 853 7364</span>
             </div>
           </a>
-          
           <div class="console-row-link">
             <div class="console-row-icon">🛰️</div>
             <div>
-              <span class="console-row-label">معرّفات قنوات التواصل الموحدة</span>
-              <span class="console-row-value">m_pari / m_pari.z</span>
+              <span class="console-row-label">الموقع الجغرافي الحالي</span>
+              <span class="console-row-value">المدينة المنورة، المملكة العربية السعودية</span>
             </div>
           </div>
         </div>
-        
-        <a href="https://wa.me/966538537364" target="_blank" class="hologram-cta-btn" style="padding: 20px 60px; font-size: 1.1rem;">
-          <span>✦ فتح اتصال آمن ومباشر عبر WhatsApp</span>
-        </a>
       </div>
     </div>
   </div>
 </div>
 
 <footer>
-  <p>جميع الحقوق محفوظة © ٢٠٢٦ — <span class="author-token">محمد مرغم</span></p>
-  <p><span class="tech-label">CYBER SYSTEM ALPHA V2</span> // FULL-STACK ARCHITECT & VISUAL DESIGNER</p>
+  <p>© جميع الحقوق محفوظة لـ <span class="author-token">محمد مرغم</span> | تصميم وبرمجة <span class="tech-label">2090 CYBER STUDIO</span></p>
 </footer>
-
-<script>
-// مراقب الأنظمة التقاطعية لتفعيل تأثيرات التمرير المستقبلي الناعم أثناء النزول
-const observerNode = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add('engaged');
-    }
-  });
-}, { threshold: 0.15 });
-
-document.querySelectorAll('.matrix-fade').forEach((element, idx) => {
-  element.style.transitionDelay = (idx % 2) * 0.15 + 's';
-  observerNode.observe(element);
-});
-</script>
 
 </body>
 </html>
